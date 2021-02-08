@@ -10,7 +10,7 @@ void setup () {
 }
 
 void draw () {
-  background(255);
+  background(255,0,0);
   
   fill(0);
   ellipse(pos.x, pos.y, 10, 10);
