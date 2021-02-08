@@ -1,5 +1,6 @@
 
 PVector pos, vel;
+PImage img;
 
 void setup () {
   size(600, 600);
@@ -7,6 +8,8 @@ void setup () {
   pos = new PVector(300, 300);
   vel = PVector.random2D();
   vel.mult(4.5);
+  
+  img = loadImage("joker.jpeg");
 }
 
 void draw () {
@@ -14,6 +17,7 @@ void draw () {
   
   fill(0);
   ellipse(pos.x, pos.y, 10, 10);
+  image(img, pos.x - img.width*0.5, pos.y - img.height * 0.5);
   
   pos.add(vel);
   if (pos.x < 0 || pos.x > width) {
